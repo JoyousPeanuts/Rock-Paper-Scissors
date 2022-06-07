@@ -13,12 +13,28 @@ function getRockPaperScissors() {
 
 
 // Get user inputs. User must be prompted for Rock, Paper or Scissors 
+function getUserInput() {
+    const userChoice = prompt('Rock, Paper Scissors?',).toLowerCase();
+    return userChoice;
+}
+
+// Compare user input with computer input to determine winner. Needs to get User Choice and compare to Computers choice.
+function getWinner(userChoice, computerChoice) {
+    if (userChoice != 'rock' || userChoice != 'paper' || userChoice != 'scissors') {
+        return 'Please enter Rock, Paper or Scissors'
+    } else if (userChoice === computerChoice) {
+        return 'Tie!'
+    } else if (userChoice === 'paper' && computerChoice === 'rock') {
+        return `Computer Chose: ${computerChoice}. You Chose: ${userChoice}, you win!`
+    } else if (userChoice === 'rock' && computerChoice === 'scissors') {
+        return `Computer Chose: ${computerChoice}. You Chose: ${userChoice}, you win!`
+    } else if (userChoice === 'scissors' && computerChoice === 'paper') {
+        return `Computer Chose: ${computerChoice}. You Chose: ${userChoice}, you win!`
+    } else {
+        return `Computer Chose: ${computerChoice}. You Chose: ${userChoice}, you win!`
+    }
+}
 
 
-// Compare user input with computer input to determine winner. 
-
-
-
-// Check for Winner
 
 // Output Winner 
